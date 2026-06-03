@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Contact Us — Sunny</title>
+  <meta name="description" content="Get in touch with the Sunny team.">
+  <link rel="icon" href="../assets/sunny_icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header class="header is-scrolled">
+    <div class="container header-inner">
+      <a href="/" class="brand" aria-label="Sunny home">
+        <img src="../assets/sunny_icon.png" alt="" class="brand-mark">
+        <span class="brand-name">Sunny</span>
+      </a>
+      <nav class="nav">
+        <a href="/#places">Sunny places</a>
+        <a href="/#how">How it works</a>
+        <a href="/#faq">FAQ</a>
+      </nav>
+      <div class="header-cta">
+        <a href="https://visit.sunnypubs.app" class="btn btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-7.58 7-13a7 7 0 1 0-14 0c0 5.42 7 13 7 13Z"/><circle cx="12" cy="9" r="2.5"/></svg>
+          View Sunny Map
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="legal-content">
+        <h1>Contact Us</h1>
+        <p>Have a question, feedback, or want to list your venue? We'd love to hear from you.</p>
+
+        <div class="contact-form" style="margin-top:32px">
+          <form action="https://formspree.io/f/placeholder" method="POST">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <select id="subject" name="subject">
+                <option value="general">General enquiry</option>
+                <option value="venue">Venue listing</option>
+                <option value="feedback">Feedback</option>
+                <option value="bug">Report a bug</option>
+                <option value="press">Press / media</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg">Send message</button>
+          </form>
+        </div>
+
+        <div style="margin-top:48px">
+          <h2>Other ways to reach us</h2>
+          <p>Email us directly at <a href="mailto:hello@sunnypubs.app">hello@sunnypubs.app</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand">
+            <img src="../assets/sunny_icon.png" alt="" class="brand-mark">
+            <span class="brand-name">Sunny</span>
+          </div>
+          <p>Find pubs and beer gardens in the sun, right now. Made with love in London.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/contact-us/">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="/privacy-policy/">Privacy</a></li>
+            <li><a href="/terms-and-conditions/">Terms &amp; conditions</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-base">
+        <span>&copy; 2026 Sunny Apps Ltd. All rights reserved.</span>
+        <span>sunnypubs.app</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
