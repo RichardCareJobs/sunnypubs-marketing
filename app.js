@@ -58,6 +58,14 @@ var FAQS = [
   render();
 })();
 
+// Cookie settings link
+document.querySelectorAll('[data-cookie-settings]').forEach(function (link) {
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+    if (window.SunnyConsent) window.SunnyConsent.showConsentBanner();
+  });
+});
+
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(function (a) {
   a.addEventListener('click', function (e) {
