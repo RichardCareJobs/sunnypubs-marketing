@@ -516,3 +516,17 @@ button { font-family: inherit; cursor: pointer; border: 0; background: transpare
 }
 .mobile-menu-btn:hover { background: var(--border-sand); }
 @media (min-width: 900px) { .mobile-menu-btn { display: none; } }
+.nav.is-open {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 72px;
+  left: 0;
+  right: 0;
+  background: var(--cream);
+  padding: 16px 24px;
+  gap: 8px;
+  border-bottom: 1px solid var(--border-sand);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  z-index: 99;
+}
