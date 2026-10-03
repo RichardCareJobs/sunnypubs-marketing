@@ -1,0 +1,25 @@
+# Jekyll config for sunnypubs.app (built by GitHub Pages).
+#
+# The existing landing pages (index.html, contact-us/, privacy-policy/,
+# terms-and-conditions/, 404.html) have no front matter, so Jekyll copies
+# them through untouched. Nothing below changes how they're built: there is
+# no site-wide permalink, theme, layout or exclude list. Everything
+# blog-specific is scoped to blog/ via `defaults`.
+
+title: Sunny
+url: "https://sunnypubs.app"
+baseurl: ""
+
+# Keep the blog's layouts inside blog/ (Jekyll's default is a root _layouts/).
+# No existing page uses a layout, so this doesn't affect them.
+layouts_dir: blog/_layouts
+
+# Posts live in blog/_posts/YYYY-MM-DD-post-name.md
+# and are published at https://sunnypubs.app/blog/post-name/
+defaults:
+  - scope:
+      path: "blog"
+      type: "posts"
+    values:
+      permalink: /blog/:title/
+      layout: post

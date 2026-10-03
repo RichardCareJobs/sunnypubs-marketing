@@ -1,0 +1,34 @@
+---
+layout: post
+title: Blog
+description: Sunny guides, tips and news on finding pubs and beer gardens in the sun.
+---
+<div class="container">
+  <div style="max-width:760px">
+    <div class="eyebrow">The Sunny blog</div>
+    <h1 class="section-title">Notes from the beer garden.</h1>
+    <p class="section-sub">Guides, tips and news on finding a table in the sun.</p>
+  </div>
+
+  {%- if site.posts.size > 0 %}
+  <div class="post-list">
+    {%- for post in site.posts %}
+    <a class="post-card" href="{{ post.url | relative_url }}">
+      {%- if post.image %}
+      <div class="post-card-img">
+        <img src="{{ post.image | relative_url }}" alt="{{ post.image_alt | default: '' | escape }}" loading="lazy">
+      </div>
+      {%- endif %}
+      <div class="post-card-body">
+        <time class="post-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %B %Y" }}</time>
+        <h2>{{ post.title | escape }}</h2>
+        <p>{{ post.description | default: post.excerpt | strip_html | normalize_whitespace | truncate: 180 | escape }}</p>
+        <span class="post-card-more">Read more &rarr;</span>
+      </div>
+    </a>
+    {%- endfor %}
+  </div>
+  {%- else %}
+  <div class="post-empty">No posts yet. Check back soon.</div>
+  {%- endif %}
+</div>
