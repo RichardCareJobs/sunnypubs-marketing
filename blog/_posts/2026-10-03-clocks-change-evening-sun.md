@@ -56,7 +56,7 @@ If you're in Sydney, Melbourne, Adelaide, Hobart or Canberra, this is the good n
 In the UK, Ireland and Europe, the after-work drink in the sun is about to become a weekend activity. Once the clocks go back, London's sunset falls before 5pm, so the sunny window moves to the middle of the day.
 
 - **Shift your timing.** Weekend lunch is the new golden hour. Aim to be sitting down by early afternoon.
-- **Find south-facing spots.** At midday on 25 October, the sun is only about 27 degrees above the horizon in London, so a three-storey building casts a shadow roughly twice its own height. South-facing gardens and terraces with open space in front of them are your best bet.
+- **Find south-facing spots.** At midday on 25 October, the sun is only about 27 degrees above the horizon in London, so a three-storey building casts a shadow roughly twice its own height. South-facing gardens and terraces with open space in front of them are your best bet. We've written a whole guide on [which beer gardens get the most sun](/blog/which-beer-gardens-get-the-most-sun/).
 - **Make the most of the last few weeks.** Between now and 25 October, there's still a little evening sun after work. Use it.
 - **Bring a layer.** Low autumn sun can feel surprisingly warm on your face, even when the air is cool. A jacket means you can stay out longer.
 
