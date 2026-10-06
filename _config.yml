@@ -10,6 +10,11 @@ title: Sunny
 url: "https://sunnypubs.app"
 baseurl: ""
 
+# Build dates in Sydney time. Without this Jekyll uses UTC, so a post dated
+# for today (Sydney) counts as a future post if the site is built before
+# 11am Sydney time, and Jekyll leaves it out.
+timezone: Australia/Sydney
+
 # Keep the blog's layouts inside blog/ (Jekyll's default is a root _layouts/).
 # No existing page uses a layout, so this doesn't affect them.
 layouts_dir: blog/_layouts
