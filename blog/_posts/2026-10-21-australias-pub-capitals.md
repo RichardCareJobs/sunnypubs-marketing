@@ -19,6 +19,8 @@ OpenStreetMap is built by volunteers, so a few pubs will be missing or mapped as
 
 ## The results
 
+<video src="/blog/assets/videos/australias-pub-capitals.mp4" poster="/blog/assets/videos/australias-pub-capitals-poster.jpg" autoplay muted loop playsinline controls preload="metadata" aria-label="Animated map of Australia showing the 90 suburbs in our count lighting up, followed by the top ten suburbs by pubs per square kilometre, led by Haymarket, Darlinghurst and Chippendale."></video>
+
 **New South Wales: Haymarket.** 11 pubs squeezed into about half a square kilometre, roughly 21 per square kilometre. That's the highest in the country, just ahead of Darlinghurst and Chippendale at around 20.
 
 **Victoria: Fitzroy.** 26 pubs in about 1.4 square kilometres, or around 19 per square kilometre. That makes it the top suburb outside New South Wales.
