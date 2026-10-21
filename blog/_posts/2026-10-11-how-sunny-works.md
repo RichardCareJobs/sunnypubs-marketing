@@ -7,6 +7,8 @@ image_alt: "A couple sitting under a large umbrella at wooden tables outside a s
 
 We get asked a lot of questions about Sunny, usually by people sitting in a beer garden wondering why the sun disappeared behind the building next door. So here are the answers in one place: what Sunny is, how it works, and what's coming soon.
 
+<video src="/blog/assets/videos/how-sunny-works.mp4" poster="/blog/assets/videos/how-sunny-works-poster.jpg" autoplay muted loop playsinline controls preload="metadata" aria-label="Animation of a person in sunglasses at a beer garden table, shuffling along with their pint to stay ahead of the shade through the afternoon, until the shade wins. It ends on: Sunny. More sun, less shuffle."></video>
+
 ## What is Sunny?
 
 Sunny is a free, live map of pubs, beer gardens and rooftops in the sun right now. Open it wherever you are and it shows you nearby places with outdoor seating, so you can head straight for the sunshine instead of guessing.
