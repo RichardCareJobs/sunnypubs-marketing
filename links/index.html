@@ -1,0 +1,279 @@
+---
+layout: null
+# Link-in-bio page. Edit the links in _data/links.yml, not here.
+---
+{%- assign links = site.data.links -%}
+{%- assign title = "Sunny — Links" -%}
+{%- assign description = "Find pubs and beer gardens in the sun, right now. Our latest posts, guides and the Sunny map, all in one place." -%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ description }}">
+  <meta name="theme-color" content="#FFF9F1">
+  <link rel="icon" href="/assets/sunny_icon.png">
+  <link rel="apple-touch-icon" href="/assets/sunny_icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="canonical" href="{{ site.url }}/links/">
+
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="{{ description }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ site.url }}/links/">
+  <meta property="og:image" content="{{ site.url }}/assets/hero_garden.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ title }}">
+  <meta name="twitter:description" content="{{ description }}">
+  <meta name="twitter:image" content="{{ site.url }}/assets/hero_garden.png">
+
+  <script src="/js/consent.js"></script>
+  <script>window.SunnyConsent?.initConsent();</script>
+{% include gtm-head.html %}
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .links-page { max-width: 560px; margin: 0 auto; padding: 40px 16px calc(48px + env(safe-area-inset-bottom)); }
+    .links-profile { text-align: center; position: relative; }
+    .links-logo { width: 88px; height: 88px; margin: 0 auto 14px; border-radius: 24px; box-shadow: var(--shadow-soft); }
+    .links-name { font-family: var(--font-display); font-weight: 700; font-size: 32px; letter-spacing: -0.02em; margin: 0; }
+    .links-tagline { color: var(--slate-grey); margin: 6px auto 0; max-width: 360px; text-wrap: pretty; }
+    .links-share {
+      position: absolute; top: 0; right: 0; width: 44px; height: 44px; border-radius: var(--radius-pill);
+      display: grid; place-items: center; background: var(--white); border: 1px solid var(--border-sand); color: var(--ink-navy);
+    }
+    .links-share:hover { border-color: var(--ink-navy); }
+    .links-share svg { width: 20px; height: 20px; }
+
+    .links-socials { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin: 20px 0 0; padding: 0; list-style: none; }
+    .links-socials a {
+      width: 44px; height: 44px; border-radius: var(--radius-pill); display: grid; place-items: center;
+      color: var(--ink-navy); transition: background .15s, color .15s;
+    }
+    .links-socials a:hover { background: var(--soft-peach); color: var(--sunny-orange); }
+    .links-socials svg { width: 22px; height: 22px; }
+
+    .links-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+    .links-pinned { margin-top: 28px; }
+    .link-btn {
+      display: flex; align-items: center; gap: 14px; min-height: 60px; padding: 10px 18px;
+      background: var(--white); border: 1px solid var(--border-sand); border-radius: var(--radius-md);
+      box-shadow: var(--shadow-card); font-weight: 600; transition: transform .15s, border-color .15s, box-shadow .15s;
+    }
+    .link-btn:hover { border-color: var(--ink-navy); transform: translateY(-1px); }
+    .link-btn:active { transform: translateY(1px); }
+    .link-btn-primary { background: var(--sunny-orange); border-color: var(--sunny-orange); color: var(--white); }
+    .link-btn-primary:hover { background: #ff5a14; border-color: #ff5a14; box-shadow: var(--shadow-pop); }
+    .link-icon { width: 22px; height: 22px; flex: 0 0 auto; }
+    .link-icon svg { width: 100%; height: 100%; display: block; }
+    .link-label { flex: 1; min-width: 0; text-align: center; }
+    .link-btn > .link-icon + .link-label { margin-right: 36px; }
+
+    .links-heading {
+      font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--sunny-orange); text-align: center; margin: 36px 0 14px;
+    }
+    .post-link { padding: 10px; gap: 12px; text-align: left; }
+    .post-link .link-label { text-align: left; }
+    .post-thumb { width: 64px; height: 64px; flex: 0 0 auto; border-radius: var(--radius-sm); object-fit: cover; background: var(--soft-peach); }
+    .post-thumb-icon { display: grid; place-items: center; color: var(--sunny-orange); }
+    .post-thumb-icon svg { width: 26px; height: 26px; }
+    .post-title { display: block; line-height: 1.3; overflow-wrap: anywhere; }
+    .post-meta { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; margin-top: 4px; font-size: 13px; font-weight: 500; color: var(--slate-grey); }
+    .post-meta .link-icon { width: 14px; height: 14px; }
+    .post-new {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+      background: var(--golden-yellow); color: var(--ink-navy); padding: 2px 8px; border-radius: var(--radius-pill);
+    }
+    .post-new[hidden] { display: none; }
+    .post-link .post-arrow { flex: 0 0 auto; width: 18px; height: 18px; color: var(--slate-grey); margin-right: 6px; }
+    .js .post-item.is-older { display: none; }
+    .links-page.show-all .post-item.is-older { display: block; }
+    .links-more { display: block; margin: 16px auto 0; }
+    .links-empty { text-align: center; color: var(--slate-grey); }
+
+    .links-footer { margin-top: 40px; text-align: center; font-size: 13px; color: var(--slate-grey); }
+    .links-footer nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 16px; margin-bottom: 8px; }
+    .links-footer a:hover { color: var(--sunny-orange); }
+    .links-toast {
+      position: fixed; left: 50%; bottom: calc(24px + env(safe-area-inset-bottom)); transform: translate(-50%, 20px);
+      background: var(--ink-navy); color: var(--white); padding: 10px 18px; border-radius: var(--radius-pill);
+      font-size: 14px; font-weight: 600; opacity: 0; pointer-events: none; transition: opacity .2s, transform .2s; z-index: 1600;
+    }
+    .links-toast.is-visible { opacity: 1; transform: translate(-50%, 0); }
+    a:focus-visible, button:focus-visible { outline: 3px solid var(--sunny-orange); outline-offset: 3px; }
+    @media (prefers-reduced-motion: reduce) { .link-btn, .links-toast { transition: none; } }
+  </style>
+</head>
+<body>
+{% include gtm-body.html %}
+  <main class="links-page" id="links-page">
+    <header class="links-profile">
+      <a href="/" aria-label="Sunny home">
+        <img src="/assets/sunny_icon.png" alt="" class="links-logo" width="88" height="88">
+      </a>
+      <h1 class="links-name">Sunny</h1>
+      <p class="links-tagline">Find pubs and beer gardens in the sun, right now.</p>
+      <button type="button" class="links-share" id="links-share" aria-label="Share this page">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+      </button>
+
+      {%- capture profile_items %}
+        {%- for p in links.profiles %}
+        {%- if p.url and p.url != "" %}
+        {%- if p.platform == "email" %}{% assign profile_label = "Email Sunny" %}{% else %}{% capture profile_label %}Sunny on {% include link-platform-name.html platform=p.platform %}{% endcapture %}{% endif %}
+        <li><a href="{{ p.url | escape }}" {% unless p.url contains "mailto:" %}target="_blank" rel="noopener"{% endunless %} aria-label="{{ profile_label }}" data-link-section="profile">{% include link-icon.html platform=p.platform %}</a></li>
+        {%- endif %}
+        {%- endfor %}
+      {%- endcapture %}
+      {%- assign profile_items = profile_items | strip %}
+      {%- if profile_items != "" %}
+      <ul class="links-socials">
+        {{ profile_items }}
+      </ul>
+      {%- endif %}
+    </header>
+
+    {%- assign pinned = links.pinned | where_exp: "p", "p.hidden != true" %}
+    {%- if pinned.size > 0 %}
+    <ul class="links-list links-pinned">
+      {%- for p in pinned %}
+      <li>
+        <a class="link-btn{% if forloop.first %} link-btn-primary{% endif %}" href="{{ p.url | escape }}" data-link-section="pinned">
+          <span class="link-icon">{% include link-icon.html platform=p.platform %}</span>
+          <span class="link-label">{{ p.title | escape }}</span>
+        </a>
+      </li>
+      {%- endfor %}
+    </ul>
+    {%- endif %}
+
+    {%- comment -%}
+      Sort posts newest first. Liquid can't sort objects by a computed value, so
+      build "YYYYMMDDHHMM-tiebreak-index" keys, sort those, and look each post up
+      by index. The tiebreak keeps posts with the same date in file order.
+    {%- endcomment -%}
+    {%- assign posts = links.posts | where_exp: "p", "p.hidden != true" %}
+    {%- capture sort_keys -%}
+      {%- for p in posts -%}
+        {{ p.date | default: "1970-01-01" | date: "%Y%m%d%H%M" }}-{{ 9999 | minus: forloop.index0 }}-{{ forloop.index0 }}{% unless forloop.last %},{% endunless %}
+      {%- endfor -%}
+    {%- endcapture -%}
+    {%- assign sort_keys = sort_keys | split: "," | sort | reverse %}
+
+    <h2 class="links-heading">Latest posts</h2>
+    {%- if posts.size > 0 %}
+    <ul class="links-list" id="links-posts">
+      {%- for key in sort_keys %}
+      {%- assign i = key | split: "-" | last | plus: 0 %}
+      {%- assign p = posts[i] %}
+      {%- capture platform_name %}{% include link-platform-name.html platform=p.platform %}{% endcapture %}
+      <li class="post-item">
+        <a class="link-btn post-link" href="{{ p.url | escape }}" {% assign url_start = p.url | slice: 0 %}{% unless url_start == "/" %}target="_blank" rel="noopener"{% endunless %} data-link-section="post">
+          {%- if p.image %}
+          <img class="post-thumb" src="{{ p.image | escape }}" alt="" loading="lazy" width="64" height="64">
+          {%- else %}
+          <span class="post-thumb post-thumb-icon">{% include link-icon.html platform=p.platform %}</span>
+          {%- endif %}
+          <span class="link-label">
+            <span class="post-title">{{ p.title | escape }}</span>
+            <span class="post-meta">
+              <span class="link-icon">{% include link-icon.html platform=p.platform %}</span>
+              <span>{{ platform_name }}</span>
+              {%- if p.date %}
+              <span aria-hidden="true">·</span>
+              <time datetime="{{ p.date | date: '%Y-%m-%d' }}">{{ p.date | date: "%-d %b %Y" }}</time>
+              <span class="post-new" hidden>New</span>
+              {%- endif %}
+            </span>
+          </span>
+          <svg class="post-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+        </a>
+      </li>
+      {%- endfor %}
+    </ul>
+    <button type="button" class="btn btn-outline links-more" id="links-more" hidden>Show older posts</button>
+    {%- else %}
+    <p class="links-empty">New posts coming soon.</p>
+    {%- endif %}
+
+    <footer class="links-footer">
+      <nav aria-label="Site">
+        <a href="/">sunnypubs.app</a>
+        <a href="/contact-us/">Contact</a>
+        <a href="/privacy-policy/">Privacy</a>
+        <a href="#" data-cookie-settings>Cookie settings</a>
+      </nav>
+      <span>&copy; {{ site.time | date: "%Y" }} Sunny Apps Ltd</span>
+    </footer>
+  </main>
+  <div class="links-toast" id="links-toast" role="status" aria-live="polite"></div>
+
+  <script>
+  (function () {
+    document.documentElement.classList.add('js');
+    var page = document.getElementById('links-page');
+    var VISIBLE_POSTS = 8;
+    var NEW_DAYS = 7;
+
+    // "New" badge, worked out in the browser so it doesn't go stale between builds
+    var now = Date.now();
+    page.querySelectorAll('.post-item time').forEach(function (t) {
+      var parts = t.getAttribute('datetime').split('-');
+      var posted = new Date(+parts[0], +parts[1] - 1, +parts[2]).getTime();
+      var age = (now - posted) / 86400000;
+      if (age >= 0 && age < NEW_DAYS) t.parentNode.querySelector('.post-new').hidden = false;
+    });
+
+    // Only show the latest few posts until asked for more
+    var items = page.querySelectorAll('.post-item');
+    var more = document.getElementById('links-more');
+    if (more && items.length > VISIBLE_POSTS) {
+      for (var i = VISIBLE_POSTS; i < items.length; i++) items[i].classList.add('is-older');
+      more.hidden = false;
+      more.addEventListener('click', function () {
+        page.classList.add('show-all');
+        more.hidden = true;
+        var next = items[VISIBLE_POSTS].querySelector('a');
+        if (next) next.focus();
+      });
+    }
+
+    // Share button: native share sheet on phones, copy the link elsewhere
+    var toast = document.getElementById('links-toast');
+    var toastTimer;
+    function showToast(msg) {
+      toast.textContent = msg;
+      toast.classList.add('is-visible');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(function () { toast.classList.remove('is-visible'); }, 2200);
+    }
+    document.getElementById('links-share').addEventListener('click', function () {
+      var url = 'https://sunnypubs.app/links/';
+      if (navigator.share) {
+        navigator.share({ title: document.title, url: url }).catch(function () {});
+      } else if (navigator.clipboard) {
+        navigator.clipboard.writeText(url).then(function () { showToast('Link copied'); }, function () { showToast(url); });
+      } else {
+        showToast(url);
+      }
+    });
+
+    // Track which links get clicked (picked up by GTM, subject to cookie consent)
+    page.addEventListener('click', function (e) {
+      var a = e.target.closest('a[data-link-section]');
+      if (!a) return;
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: 'links_page_click',
+        link_section: a.getAttribute('data-link-section'),
+        link_text: (a.getAttribute('aria-label') || a.textContent).replace(/\s+/g, ' ').trim(),
+        link_url: a.href
+      });
+    });
+  })();
+  </script>
+</body>
+</html>
