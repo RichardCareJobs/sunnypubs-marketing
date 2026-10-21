@@ -1,0 +1,59 @@
+# Links for https://sunnypubs.app/links/
+#
+# HOW TO ADD A NEW SOCIAL POST
+# Add an entry under `posts:` below (top of the list is easiest). The page
+# sorts by date, newest first, so order in this file doesn't matter.
+#
+#   - title: Which beer gardens get the most sun?
+#     url: https://www.instagram.com/p/XXXXXXXXX/
+#     date: 2026-10-21          # or "2026-10-21 18:30" (quoted) to order posts on the same day
+#     platform: instagram       # instagram, tiktok, facebook, x, threads, youtube, linkedin, blog, map, email, web
+#     image: /blog/assets/images/which-beer-gardens-get-the-most-sun.jpg   # optional thumbnail
+#     hidden: true              # optional: hide without deleting
+#
+# Posts dated within the last 7 days get a "New" badge automatically.
+# Commit and push, and the page updates once GitHub Pages rebuilds (a minute or two).
+
+# Your profiles, shown as a row of icons under the logo.
+# Paste in the full profile URL; any left blank aren't shown.
+profiles:
+  - platform: instagram
+    url: ""
+  - platform: tiktok
+    url: ""
+  - platform: facebook
+    url: ""
+  - platform: x
+    url: ""
+  - platform: threads
+    url: ""
+  - platform: youtube
+    url: ""
+  - platform: linkedin
+    url: ""
+  - platform: email
+    url: "mailto:sunny@sunnypubs.app"
+
+# Always shown at the top, above the latest posts. The first one is the
+# highlighted (orange) button.
+pinned:
+  - title: Find a beer garden in the sun
+    url: https://visit.sunnypubs.app
+    platform: map
+  - title: Read the Sunny blog
+    url: /blog/
+    platform: blog
+
+# Latest posts, newest first on the page.
+posts:
+  - title: "Australia's pub capitals: the suburb with the most pubs packed in, state by state"
+    url: /blog/australias-pub-capitals/
+    date: 2026-10-21
+    platform: blog
+    image: /blog/assets/images/australias-pub-capitals.jpg
+
+  - title: "Rooftop bar or beer garden: which actually gets more sun?"
+    url: /blog/rooftop-bar-or-beer-garden/
+    date: 2026-10-17
+    platform: blog
+    image: /blog/assets/images/rooftop-bar-or-beer-garden.jpg

@@ -1,0 +1,16 @@
+{%- comment -%}
+  Display name for a platform on the /links/ page. Usage: {% include link-platform-name.html platform="tiktok" %}
+{%- endcomment -%}
+{%- case include.platform -%}
+{%- when "instagram" -%}Instagram
+{%- when "tiktok" -%}TikTok
+{%- when "facebook" -%}Facebook
+{%- when "x" or "twitter" -%}X
+{%- when "threads" -%}Threads
+{%- when "youtube" -%}YouTube
+{%- when "linkedin" -%}LinkedIn
+{%- when "email" -%}email
+{%- when "map" -%}Sunny map
+{%- when "blog" -%}Blog
+{%- else -%}Link
+{%- endcase -%}
