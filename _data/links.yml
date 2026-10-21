@@ -18,7 +18,7 @@
 # Paste in the full profile URL; any left blank aren't shown.
 profiles:
   - platform: instagram
-    url: ""
+    url: "https://www.instagram.com/sunny_pubs/"
   - platform: tiktok
     url: ""
   - platform: facebook
