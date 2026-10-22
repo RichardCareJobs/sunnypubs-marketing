@@ -8,21 +8,6 @@
   }
 })();
 
-// Count-up animation
-(function () {
-  var el = document.getElementById('count-up');
-  if (!el) return;
-  var to = 37, duration = 1400, start = performance.now();
-  function tick(now) {
-    var t = Math.min(1, (now - start) / duration);
-    var eased = 1 - Math.pow(1 - t, 3);
-    el.textContent = Math.round(to * eased);
-    if (t < 1) requestAnimationFrame(tick);
-  }
-  requestAnimationFrame(tick);
-})();
-
-
 // FAQ
 var FAQS = [
   { q: 'Is Sunny just for pubs, or other venues too?', a: 'Pubs, beer gardens, rooftops, sports clubs and casual restaurants — anywhere serving a drink with proper outdoor seating. If it has a chair in the sun, we\'ll find it.' },
