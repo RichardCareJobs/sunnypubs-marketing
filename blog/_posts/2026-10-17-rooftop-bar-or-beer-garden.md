@@ -11,6 +11,8 @@ It's a sunny afternoon and you're deciding where to go. Rooftop bar or beer gard
 
 **Rooftops usually get more sun.** **Beer gardens are better for shade, shelter and space.**
 
+<video src="/blog/assets/videos/rooftop-cheers.mp4" poster="/blog/assets/videos/rooftop-cheers-poster.jpg" autoplay muted loop playsinline controls preload="metadata" aria-label="Animation of a person at a beer garden table who looks up and spots someone on the rooftop bar above. They raise their pints and cheers across the gap. Same sun. Different altitude. It ends on: Sunny. Up top or down below, find your sun."></video>
+
 ## Why rooftops get more sun
 
 Shadows come from whatever sits between you and the sun: buildings, trees, walls and fences. In a beer garden, those are all around you. On a rooftop, most of them are below you.
