@@ -46,6 +46,12 @@ pinned:
 
 # Latest posts, newest first on the page.
 posts:
+  - title: "Golden hour at the pub: what it is and how to catch it"
+    url: /blog/golden-hour-at-the-pub/
+    date: 2026-11-04
+    platform: blog
+    image: /blog/assets/images/golden-hour-at-the-pub.jpg
+
   - title: "Australia's pub capitals: the suburb with the most pubs packed in, state by state"
     url: /blog/australias-pub-capitals/
     date: 2026-10-21
