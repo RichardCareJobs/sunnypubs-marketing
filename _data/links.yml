@@ -46,6 +46,12 @@ pinned:
 
 # Latest posts, newest first on the page.
 posts:
+  - title: "The world's sunniest cities for an outdoor drink"
+    url: /blog/worlds-sunniest-cities-for-an-outdoor-drink/
+    date: 2026-11-11
+    platform: blog
+    image: /blog/assets/images/worlds-sunniest-cities-for-an-outdoor-drink.jpg
+
   - title: "Golden hour at the pub: what it is and how to catch it"
     url: /blog/golden-hour-at-the-pub/
     date: 2026-11-04
